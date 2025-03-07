@@ -76,6 +76,7 @@ pipeline {
                     steps {
                         script{
                             dir("Automations"){
+                                sh "export AWS_PROFILE=INDRA"
                                 sh "bash updatebackendnew.sh"
                             }
                         }
@@ -86,6 +87,7 @@ pipeline {
                     steps {
                         script{
                             dir("Automations"){
+                                sh "export AWS_PROFILE=INDRA"
                                 sh "bash updatefrontendnew.sh"
                             }
                         }
