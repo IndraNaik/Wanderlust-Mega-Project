@@ -76,8 +76,6 @@ pipeline {
                     steps {
                         script{
                             dir("Automations"){
-                                sh "export AWS_PROFILE=INDRA"
-                                sh "aws sts get-caller-identity"
                                 sh "bash updatebackendnew.sh"
                             }
                         }
@@ -88,8 +86,6 @@ pipeline {
                     steps {
                         script{
                             dir("Automations"){
-                                sh "export AWS_PROFILE=INDRA"
-                                sh "aws sts get-caller-identity"
                                 sh "bash updatefrontendnew.sh"
                             }
                         }
